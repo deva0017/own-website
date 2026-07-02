@@ -1,37 +1,51 @@
-
 body{
     margin:0;
     font-family:Arial, sans-serif;
 }
 
+/* HERO SECTION */
 .hero{
     background:linear-gradient(rgba(0,0,0,0.6), rgba(0,0,0,0.6)),
     url("images/travel.jpg");
     background-size:cover;
     background-position:center;
+
     color:white;
     text-align:center;
+
     padding:120px 20px;
+
+    /* Center everything vertically */
+    min-height:100vh;
+    display:flex;
+    flex-direction:column;
+    justify-content:center;
+    align-items:center;
 }
 
+/* MAIN TITLE */
 .hero h1{
     font-size:60px;
     margin-bottom:10px;
     letter-spacing:3px;
 }
 
+/* SUB TITLE */
 .hero h2{
     font-size:30px;
     margin-bottom:20px;
     color:#FFD700;
 }
 
+/* PARAGRAPH */
 .hero p{
     font-size:20px;
     line-height:1.6;
     margin-bottom:30px;
+    max-width:700px;
 }
 
+/* BUTTONS */
 .btn{
     display:inline-block;
     background:#ff6600;
@@ -41,8 +55,11 @@ body{
     margin:10px;
     border-radius:5px;
     font-weight:bold;
+    transition:0.3s;
 }
 
+/* HOVER EFFECT */
 .btn:hover{
     background:#e65c00;
+    transform:scale(1.05);
 }
