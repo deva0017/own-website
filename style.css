@@ -13,28 +13,32 @@ body{
 header{
     position:absolute;
     width:100%;
+    top:0;
+    left:0;
     z-index:100;
 }
 
 .navbar{
     display:flex;
-    justify-content:space-between;
+    justify-content:center;
     align-items:center;
-    padding:20px 60px;
+    padding:20px 50px;
 }
 
 .menu{
-    display:flex;
     list-style:none;
+    display:flex;
 }
 
 .menu li{
-    margin-right:30px;
+    position:relative;
+    margin:0 25px;
 }
 
 .menu a{
     text-decoration:none;
-    color:#fff;
+    color:white;
+    font-size:18px;
     font-weight:500;
     transition:0.3s;
 }
@@ -43,123 +47,193 @@ header{
     color:#FFD700;
 }
 
-.contact-info{
-    color:#FFD700;
-    font-size:18px;
-    font-weight:600;
+/* Contact Dropdown */
+
+.dropdown-content{
+    display:none;
+    position:absolute;
+    top:40px;
+    left:0;
+    background:white;
+    min-width:220px;
+    border-radius:8px;
+    box-shadow:0 5px 15px rgba(0,0,0,.3);
+    overflow:hidden;
+}
+
+.dropdown-content p{
+    padding:12px;
+    color:#000;
+    font-size:16px;
+    border-bottom:1px solid #ddd;
+}
+
+.dropdown-content p:last-child{
+    border-bottom:none;
+}
+
+.dropdown:hover .dropdown-content{
+    display:block;
 }
 
 /* Hero Section */
 
 .hero{
+
     position:relative;
+
     width:100%;
+
     height:100vh;
 
     background-image:url("images/van.jpg");
+
     background-size:cover;
+
     background-position:center;
+
     background-repeat:no-repeat;
 
     display:flex;
+
     justify-content:center;
+
     align-items:center;
+
     text-align:center;
+
 }
 
 .overlay{
+
     position:absolute;
+
     top:0;
+
     left:0;
+
     width:100%;
+
     height:100%;
-    background:rgba(0,0,0,0.55);
+
+    background:rgba(0,0,0,.55);
+
 }
 
 .content{
+
     position:relative;
+
     z-index:2;
-    color:#fff;
+
+    color:white;
+
 }
 
 .content h1{
+
     font-size:70px;
+
     color:#FFD700;
+
     margin-bottom:20px;
+
 }
 
 .content h2{
+
     font-size:35px;
+
     margin-bottom:20px;
+
 }
 
 .content p{
+
     font-size:20px;
+
     line-height:1.8;
-    margin-bottom:30px;
+
+    margin-bottom:35px;
+
 }
 
 .btn{
+
     display:inline-block;
+
     padding:15px 35px;
+
     margin:10px;
+
     background:#ff6600;
-    color:#fff;
+
+    color:white;
+
     text-decoration:none;
+
     border-radius:30px;
-    transition:0.3s;
+
+    transition:.3s;
+
 }
 
 .btn:hover{
+
     background:#FFD700;
-    color:#000;
-}
 
-.contact{
-    margin-top:40px;
-}
+    color:black;
 
-.contact h3{
-    color:#FFD700;
-    margin-bottom:10px;
-}
-
-.contact p{
-    font-size:20px;
 }
 
 /* Mobile */
 
 @media(max-width:768px){
 
-    .navbar{
-        flex-direction:column;
-        gap:15px;
-        padding:20px;
-    }
+.navbar{
 
-    .menu{
-        flex-wrap:wrap;
-        justify-content:center;
-    }
+flex-direction:column;
 
-    .menu li{
-        margin:10px;
-    }
+padding:20px;
 
-    .content h1{
-        font-size:45px;
-    }
+}
 
-    .content h2{
-        font-size:25px;
-    }
+.menu{
 
-    .content p{
-        font-size:16px;
-    }
+flex-wrap:wrap;
 
-    .contact-info{
-        font-size:15px;
-    }
+justify-content:center;
+
+}
+
+.menu li{
+
+margin:10px;
+
+}
+
+.content h1{
+
+font-size:45px;
+
+}
+
+.content h2{
+
+font-size:24px;
+
+}
+
+.content p{
+
+font-size:16px;
+
+}
+
+.dropdown-content{
+
+left:-50px;
+
+}
+
 }
